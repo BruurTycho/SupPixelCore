@@ -36,12 +36,12 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 			BukkitRunnable runnable = new BukkitRunnable() {
 
 				int step = 0;
-
+				List<String> players = new ArrayList<String>();
 				@Override
 				public void run() {
-					List<String> players = new ArrayList<String>();
+					
 				if(!players.contains(((Player) sender).getPlayer().getName())) {
-						players.add(((Player) sender).getPlayer().getName());
+					players.remove(((Player) sender).getPlayer().getName());
 						
 
 						GlowAPI.Color color = null;
@@ -54,13 +54,18 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 						GlowAPI.setGlowing(((Player) sender).getPlayer(), color, ((Player) sender).getPlayer());
 						System.out.println("kleurtje " + color);
 						System.out.println("players array" + players);
+						players.add(((Player) sender).getPlayer().getName());
 						step++;
-						
-						} else {
+				}
+						if(players.contains(((Player) sender).getPlayer().getName())) {
 							// you already enabled it
 							System.out.println(((Player) sender).getPlayer().getName() + " has already enabled rainbow");
+							cancel();
+							
+
+						
 						}
-				}
+						}
 			};
 			runnable.runTaskTimer(plugin, 0L, 10L);
 		}
