@@ -21,6 +21,18 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 	public CommandGlowRainbowAdmin(SupPixelCore plugin) {
 		this.plugin = plugin;
 	}
+	public List<String> players = new ArrayList<String>();
+	
+	public void toggleGlow(Player player){
+		
+		if(players.contains(player.getName())){
+			players.remove(player.getName());
+			player.sendMessage("Toggled off glow!");
+		}else{
+			players.add(player.getName());
+			player.sendMessage("Toggled on glow!");
+		}
+	}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -35,15 +47,16 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
             return true;
         }
         if (sender instanceof Player) {
+
+        	toggleGlow(player);
             BukkitRunnable runnable = new BukkitRunnable() {
 
                 int step = 0;
-                List<String> players = new ArrayList<String>();
+            	
                 @Override
                 public void run() {
 
                     if(players.contains(player.getName())) {
-                        players.remove(player.getName());
                         
                         plugin.getServer().getLogger().info(player.getName() + " has toggled off!");
                         cancel();
@@ -59,7 +72,6 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
                         GlowAPI.setGlowing(player, color, player);
                         System.out.println("kleurtje " + color);
                         System.out.println("players array" + players);
-                        players.add(player.getName());
                         step++;
                         plugin.getServer().getLogger().info(player.getName() + " has toggled on!");
 
