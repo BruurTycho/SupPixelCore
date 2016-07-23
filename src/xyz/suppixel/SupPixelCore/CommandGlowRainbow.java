@@ -24,7 +24,7 @@ public class CommandGlowRainbow implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!sender.hasPermission("suppixel.glowrainbow")) { // if the sender DOESNT
 														// have permissions
-			final String glowrainbownopermmessage1raw = "&7[&cMemory&7] &fYou do not have permission!";
+			final String glowrainbownopermmessage1raw = "&7[&cGlow&7] &fYou do not have permission!";
 			final String glowrainbownopermmessage1fancy = ChatColor.translateAlternateColorCodes('&', glowrainbownopermmessage1raw);
 			sender.sendMessage(glowrainbownopermmessage1fancy);
 			return true;
