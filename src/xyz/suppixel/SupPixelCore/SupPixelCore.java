@@ -1,6 +1,5 @@
 package xyz.suppixel.SupPixelCore;
 
-import org.apache.logging.log4j.core.appender.rolling.OnStartupTriggeringPolicy;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
