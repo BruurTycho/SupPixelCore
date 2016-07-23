@@ -1,5 +1,8 @@
 package xyz.suppixel.SupPixelCore;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -36,17 +39,26 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 
 				@Override
 				public void run() {
+					List<String> players = new ArrayList<String>();
+					if(!players.contains(((Player) sender).getPlayer().getName())) {
+						players.add(((Player) sender).getPlayer().getName());
+						
 
-					GlowAPI.Color color = null;
+						GlowAPI.Color color = null;
 
-					if (step >= RAINBOW_COLORS.length)
-						step = 0;
+						if (step >= RAINBOW_COLORS.length)
+							step = 0;
 
-					color = RAINBOW_COLORS[step];
+						color = RAINBOW_COLORS[step];
 
-					GlowAPI.setGlowing(((Player) sender).getPlayer(), color, ((Player) sender).getPlayer());
-					System.out.println("kleurtje " + color);
-					step++;
+						GlowAPI.setGlowing(((Player) sender).getPlayer(), color, ((Player) sender).getPlayer());
+						System.out.println("kleurtje " + color);
+						step++;
+						
+						} else {
+							// you already enabled it
+							System.out.println(((Player) sender).getPlayer().getName() + " has already enabled rainbow");
+						}
 				}
 			};
 			runnable.runTaskTimer(plugin, 0L, 0L);
