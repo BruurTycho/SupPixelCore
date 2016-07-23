@@ -1,9 +1,11 @@
 package xyz.suppixel.SupPixelCore;
 
+import org.apache.logging.log4j.core.appender.rolling.OnStartupTriggeringPolicy;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.github.cheesesoftware.PowerfulPermsAPI.PermissionManager;
@@ -36,6 +38,10 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		event.setJoinMessage(null);
+	}
+	@EventHandler
+	public void onPlayerQuit(PlayerQuitEvent event) {
+		event.setQuitMessage(null);
 	}
 	
 	PowerfulPermsPlugin plugin = (PowerfulPermsPlugin) Bukkit.getPluginManager().getPlugin("PowerfulPerms");
