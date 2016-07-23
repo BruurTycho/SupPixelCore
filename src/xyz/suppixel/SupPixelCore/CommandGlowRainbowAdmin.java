@@ -40,7 +40,7 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 				@Override
 				public void run() {
 					List<String> players = new ArrayList<String>();
-					if(!players.contains(((Player) sender).getPlayer().getName())) {
+				if(!players.contains(((Player) sender).getPlayer().getName())) {
 						players.add(((Player) sender).getPlayer().getName());
 						
 
@@ -53,6 +53,7 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 
 						GlowAPI.setGlowing(((Player) sender).getPlayer(), color, ((Player) sender).getPlayer());
 						System.out.println("kleurtje " + color);
+						System.out.println("players array" + players);
 						step++;
 						
 						} else {
@@ -61,9 +62,7 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 						}
 				}
 			};
-			runnable.runTaskTimer(plugin, 0L, 0L);
-			int ID = runnable.getTaskId();
-			System.out.println("hier je kut id" + ID);
+			runnable.runTaskTimer(plugin, 0L, 10L);
 		}
 		return false;
 	}
