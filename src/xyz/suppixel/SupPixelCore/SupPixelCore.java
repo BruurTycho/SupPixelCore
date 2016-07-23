@@ -26,6 +26,7 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getCommand("day").setExecutor(new CommandDay(this));
 		getCommand("glowrainbow").setExecutor(new CommandGlowRainbow(this));
 		getCommand("glowrainbowadmin").setExecutor(new CommandGlowRainbowAdmin(this));
+		getCommand("customusername").setExecutor(new CommandCustomUsername(this));
 	}
 	
 	@Override
