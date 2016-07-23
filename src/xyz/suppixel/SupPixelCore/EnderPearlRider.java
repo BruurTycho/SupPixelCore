@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.projectiles.ProjectileSource;
+import org.bukkit.util.Vector;
 
 public class EnderPearlRider implements Listener {
 	SupPixelCore plugin; // make the variable that is actually just the plugin
@@ -37,6 +38,8 @@ public class EnderPearlRider implements Listener {
 		if (event.getEntity() instanceof EnderPearl) {
 			final ProjectileSource shooter = event.getEntity().getShooter();
 			event.getEntity().setPassenger((Entity) shooter);
+			event.getEntity().setGravity(false);
+			event.getEntity().setVelocity(new Vector(3, 1, 0));
 		}
 	}
 }
