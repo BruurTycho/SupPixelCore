@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_101"/>
-	<classpathentry kind="lib" path="C:/Users/BruurTycho/Desktop/BuildTools/spigot-1.10.jar"/>
-	<classpathentry kind="lib" path="D:/Testing/Lib/PowerfulPermsAPI-1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files/Java/jre1.8.0_101/lib/jfr.jar"/>
-	<classpathentry kind="lib" path="D:/Testing/Lib/GlowAPI_v1.4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/FinnT730_/Desktop/BuildTools/spigot-1.10.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/FinnT730_/Downloads/GlowAPI.jar"/>
+	<classpathentry kind="lib" path="C:/Users/FinnT730_/Downloads/PowerfulPermsAPI-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
