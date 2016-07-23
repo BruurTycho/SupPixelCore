@@ -22,53 +22,55 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 		this.plugin = plugin;
 	}
 
-	@Override
-	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+	 @Override
+	    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+	        
+	        Player player = (Player) sender;
 
-		if (!sender.hasPermission("suppixel.glowrainbowadmin")) { // if the
-																	// sender
-																	// DOESNT
-			// have permissions
-			sender.sendMessage("u haz no permz");
-			return true;
-		}
-		if (sender instanceof Player) {
-			BukkitRunnable runnable = new BukkitRunnable() {
+	        if (!sender.hasPermission("suppixel.glowrainbowadmin")) { // if the
+	                                                                    // sender
+	                                                                    // DOESNT
+	            // have permissions
+	            sender.sendMessage("u haz no permz");
+	            return true;
+	        }
+	        if (sender instanceof Player) {
+	            BukkitRunnable runnable = new BukkitRunnable() {
 
-				int step = 0;
-				List<String> players = new ArrayList<String>();
-				@Override
-				public void run() {
-					
-				if(!players.contains(((Player) sender).getPlayer().getName())) {
-					players.remove(((Player) sender).getPlayer().getName());
-						
+	                int step = 0;
+	                List<String> players = new ArrayList<String>();
+	                @Override
+	                public void run() {
+	                    
+	                if(!players.contains(player.getName())) {
+	                    players.remove(player.getName());
+	                        
 
-						GlowAPI.Color color = null;
+	                        GlowAPI.Color color = null;
 
-						if (step >= RAINBOW_COLORS.length)
-							step = 0;
+	                        if (step >= RAINBOW_COLORS.length)
+	                            step = 0;
 
-						color = RAINBOW_COLORS[step];
+	                        color = RAINBOW_COLORS[step];
 
-						GlowAPI.setGlowing(((Player) sender).getPlayer(), color, ((Player) sender).getPlayer());
-						System.out.println("kleurtje " + color);
-						System.out.println("players array" + players);
-						players.add(((Player) sender).getPlayer().getName());
-						step++;
-				}
-						if(players.contains(((Player) sender).getPlayer().getName())) {
-							// you already enabled it
-							System.out.println(((Player) sender).getPlayer().getName() + " has already enabled rainbow");
-							cancel();
-							
+	                        GlowAPI.setGlowing(((Player) sender).getPlayer(), color, ((Player) sender).getPlayer());
+	                        System.out.println("kleurtje " + color);
+	                        System.out.println("players array" + players);
+	                        players.add(player.getName());
+	                        step++;
+	                }
+	                        if(players.contains(player.getName())) {
+	                            // you already enabled it
+	                            System.out.println(player.getName() + " has already enabled rainbow");
+	                            cancel();
+	                            
 
-						
-						}
-						}
-			};
-			runnable.runTaskTimer(plugin, 0L, 10L);
-		}
-		return false;
+	                        
+	                        }
+	                        }
+	            };
+	            runnable.runTaskTimer(plugin, 0L, 10L);
+	        }
+	        return false;
+	    }
 	}
-}
