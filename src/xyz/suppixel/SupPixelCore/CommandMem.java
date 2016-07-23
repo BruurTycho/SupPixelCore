@@ -28,7 +28,9 @@ public class CommandMem implements CommandExecutor {
 			sender.sendMessage("" + memmessage2fancy);
 
 		} else {
-			sender.sendMessage("u haz no perm 4 /mem");
+			final String memnopermmessage1raw = "&7[&cMemory&7] &fYou do not have permission!";
+			final String memnopermmessage1fancy = ChatColor.translateAlternateColorCodes('&', memnopermmessage1raw);
+			sender.sendMessage(memnopermmessage1fancy);
 		}
 		return true; // magic :3
 	}
