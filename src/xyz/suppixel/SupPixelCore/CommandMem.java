@@ -21,7 +21,7 @@ public class CommandMem implements CommandExecutor {
 
 			final String memmessage2raw = "&7[&cMemory&7] &a" + (Runtime.getRuntime().freeMemory() / 1024 / 1024)
 					+ "&7 / &6" + (Runtime.getRuntime().totalMemory() / 1024 / 1024) + " &7 / &c"
-					+ (Runtime.getRuntime().maxMemory() / 1024 / 1024);
+					+ (Runtime.getRuntime().maxMemory() / 1024 / 1024); //TOOD: Need to fix, so you get the correct MEM stats! :_)
 			final String memmessage2fancy = ChatColor.translateAlternateColorCodes('&', memmessage2raw);
 
 			sender.sendMessage("" + memmessagefancy);

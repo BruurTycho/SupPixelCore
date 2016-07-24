@@ -27,10 +27,8 @@ public class CommandGlowRainbowAdmin implements CommandExecutor {
 		
 		if(players.contains(player.getName())){
 			players.remove(player.getName());
-			player.sendMessage("Toggled off glow!");
 		}else{
 			players.add(player.getName());
-			player.sendMessage("Toggled on glow!");
 		}
 	}
 

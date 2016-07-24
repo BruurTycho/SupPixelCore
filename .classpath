@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="C:/Users/FinnT730_/Desktop/BuildTools/spigot-1.10.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/FinnT730_/Downloads/GlowAPI.jar"/>
 	<classpathentry kind="lib" path="C:/Users/FinnT730_/Downloads/PowerfulPermsAPI-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/FinnT730_/Desktop/Plugin test server/plugins/askyblock.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
