@@ -18,7 +18,6 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(this, this);
 		getServer().getPluginManager().registerEvents(new EnderPearlRider(this), this);
-		getServer().getPluginManager().registerEvents(new SkyblockFly(this), this);
 		getLogger().info("onEnabled, done.");
 		getCommand("spawn").setExecutor(new CommandSpawn(this)); // this = SupPixelCore --- CommandSpawn = CommandSpawn Class
 		getCommand("mem").setExecutor(new CommandMem(this));
