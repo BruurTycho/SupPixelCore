@@ -25,7 +25,7 @@ public class SkyblockFly implements Listener {
 			final UUID playerenter = (UUID) event.getPlayer();
 			final Player playerenterusername = plugin.getServer().getPlayer(playerenter);
 			playerenterusername.setFlying(true);
-			plugin.getServer().broadcastMessage("oma is irr");
+			plugin.getServer().broadcastMessage("oma is irr"); // Niet waar! :)
 		} else {
 			// 	
 		}
