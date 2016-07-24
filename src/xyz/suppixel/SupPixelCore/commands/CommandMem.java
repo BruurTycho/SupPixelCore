@@ -1,9 +1,11 @@
-package xyz.suppixel.SupPixelCore;
+package xyz.suppixel.SupPixelCore.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+
+import xyz.suppixel.SupPixelCore.SupPixelCore;
 
 public class CommandMem implements CommandExecutor {
 	SupPixelCore plugin; // make the variable that is actually just the plugin

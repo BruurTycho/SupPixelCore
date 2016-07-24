@@ -10,6 +10,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.github.cheesesoftware.PowerfulPermsAPI.PermissionManager;
 import com.github.cheesesoftware.PowerfulPermsAPI.PowerfulPermsPlugin;
 
+import xyz.suppixel.SupPixelCore.commands.CommandDay;
+import xyz.suppixel.SupPixelCore.commands.CommandGetPrefix;
+import xyz.suppixel.SupPixelCore.commands.CommandGlowRainbow;
+import xyz.suppixel.SupPixelCore.commands.CommandGlowRainbowAdmin;
+import xyz.suppixel.SupPixelCore.commands.CommandMem;
+import xyz.suppixel.SupPixelCore.commands.CommandSpawn;
+import xyz.suppixel.SupPixelCore.commands.CommandSun;
+import xyz.suppixel.SupPixelCore.events.EnderPearlRider;
+import xyz.suppixel.SupPixelCore.events.SkyblockFly;
+
 public class SupPixelCore extends JavaPlugin implements Listener {
 	
 	

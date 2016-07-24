@@ -1,4 +1,4 @@
-package xyz.suppixel.SupPixelCore;
+package xyz.suppixel.SupPixelCore.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.inventivetalent.glow.GlowAPI;
+
+import xyz.suppixel.SupPixelCore.SupPixelCore;
 
 public class CommandGlowRainbow implements CommandExecutor {
 	SupPixelCore plugin; // make a variable that is actually just the plugin

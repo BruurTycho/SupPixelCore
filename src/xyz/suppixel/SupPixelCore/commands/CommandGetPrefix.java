@@ -1,4 +1,4 @@
-package xyz.suppixel.SupPixelCore;
+package xyz.suppixel.SupPixelCore.commands;
 
 import java.util.UUID;
 
@@ -14,6 +14,8 @@ import com.github.cheesesoftware.PowerfulPermsAPI.PermissionManager;
 import com.github.cheesesoftware.PowerfulPermsAPI.PermissionPlayer;
 import com.github.cheesesoftware.PowerfulPermsAPI.PowerfulPermsPlugin;
 import com.github.cheesesoftware.PowerfulPermsAPI.ResultRunnable;
+
+import xyz.suppixel.SupPixelCore.SupPixelCore;
 
 public class CommandGetPrefix implements CommandExecutor {
 	SupPixelCore plugin; // make a variable that is actually just the plugin

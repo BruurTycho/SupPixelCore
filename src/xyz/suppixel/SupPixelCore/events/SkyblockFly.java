@@ -1,4 +1,4 @@
-package xyz.suppixel.SupPixelCore;
+package xyz.suppixel.SupPixelCore.events;
 
 import java.util.UUID;
 
@@ -9,6 +9,8 @@ import org.bukkit.event.Listener;
 
 import com.wasteofplastic.askyblock.events.IslandEnterEvent;
 import com.wasteofplastic.askyblock.events.IslandExitEvent;
+
+import xyz.suppixel.SupPixelCore.SupPixelCore;
 
 public class SkyblockFly implements Listener {
 	SupPixelCore plugin; // make the variable that is actually just the plugin

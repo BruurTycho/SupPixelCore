@@ -1,9 +1,11 @@
-package xyz.suppixel.SupPixelCore;
+package xyz.suppixel.SupPixelCore.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import xyz.suppixel.SupPixelCore.SupPixelCore;
 
 public class CommandSpawn implements CommandExecutor {
 	SupPixelCore plugin; // make a variable that is actually just the plugin (main class) (y)

@@ -1,4 +1,4 @@
-package xyz.suppixel.SupPixelCore;
+package xyz.suppixel.SupPixelCore.events;
 
 import org.bukkit.Material;
 import org.bukkit.entity.EnderPearl;
@@ -12,6 +12,8 @@ import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.projectiles.ProjectileSource;
 import org.bukkit.util.Vector;
+
+import xyz.suppixel.SupPixelCore.SupPixelCore;
 
 public class EnderPearlRider implements Listener {
 	SupPixelCore plugin; // make the variable that is actually just the plugin
