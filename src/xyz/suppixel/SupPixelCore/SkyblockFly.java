@@ -24,8 +24,8 @@ public class SkyblockFly implements Listener {
 		if (ownerusername.hasPermission("suppixel.islandfly")) {
 			final UUID playerenter = (UUID) event.getPlayer();
 			final Player playerenterusername = plugin.getServer().getPlayer(playerenter);
+			playerenterusername.setAllowFlight(true);
 			playerenterusername.setFlying(true);
-			plugin.getServer().broadcastMessage("oma is irr");
 		} else {
 			// 	
 		}
