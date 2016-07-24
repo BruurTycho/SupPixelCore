@@ -2,6 +2,7 @@ package xyz.suppixel.SupPixelCore;
 
 import java.util.UUID;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,6 +26,9 @@ public class SkyblockFly implements Listener {
 			final Player playerenterusername = plugin.getServer().getPlayer(playerenter);
 			playerenterusername.setAllowFlight(true);
 			playerenterusername.setFlying(true);
+			final String IslandEnterMessage1raw = "&7[&cAuto-Fly&7] &fEnabled fly.";
+			final String IslandEnterMessage1fancy = ChatColor.translateAlternateColorCodes('&', IslandEnterMessage1raw);
+			playerenterusername.sendMessage(IslandEnterMessage1fancy);
 		} else {
 			
 		}
@@ -39,6 +43,9 @@ public class SkyblockFly implements Listener {
 				final Player playerenterusername = plugin.getServer().getPlayer(playerenter);
 				playerenterusername.setAllowFlight(false);
 				playerenterusername.setFlying(false);
+				final String IslandExitMessage1raw = "&7[&cAuto-Fly&7] &fDisabled fly.";
+				final String IslandExitMessage1fancy = ChatColor.translateAlternateColorCodes('&', IslandExitMessage1raw);
+				playerenterusername.sendMessage(IslandExitMessage1fancy);
 			} else {
 	}
 }
