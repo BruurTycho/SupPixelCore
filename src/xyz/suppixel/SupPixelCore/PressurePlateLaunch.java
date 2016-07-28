@@ -1,5 +1,6 @@
 package xyz.suppixel.SupPixelCore;
 
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -19,7 +20,9 @@ public class PressurePlateLaunch implements Listener {
 		if (event.getAction().equals(Action.PHYSICAL)){
 			if(event.getClickedBlock().getType() == Material.STONE_PLATE){
 				Player player = event.getPlayer();
-				player.setVelocity(player.getLocation().getDirection().multiply(1.5).setY(3));
+				Location playerloc = player.getLocation().add(0.0D, 1.0D, 0.0D);
+				player.teleport(playerloc);
+				player.setVelocity(player.getVelocity().add(player.getLocation().getDirection().multiply(3.5D)).setY(1D));
 			}
 		}
 	}
