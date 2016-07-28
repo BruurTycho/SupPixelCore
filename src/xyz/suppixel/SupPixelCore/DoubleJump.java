@@ -22,7 +22,7 @@ public class DoubleJump implements Listener {
 		event.setCancelled(true);
 		player.setAllowFlight(false);
 		player.setFlying(false);
-		player.setVelocity(player.getLocation().getDirection().multiply(4.5).setY(1));
+		player.setVelocity(player.getLocation().getDirection().multiply(1.5).setY(1));
 	}
 	
 	
