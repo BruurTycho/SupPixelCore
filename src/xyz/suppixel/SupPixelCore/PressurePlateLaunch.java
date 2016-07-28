@@ -19,7 +19,7 @@ public class PressurePlateLaunch implements Listener {
 		if (event.getAction().equals(Action.PHYSICAL)){
 			if(event.getClickedBlock().getType() == Material.STONE_PLATE){
 				Player player = event.getPlayer();
-				player.setVelocity(player.getLocation().getDirection().multiply(1.5).setY(1));
+				player.setVelocity(player.getLocation().getDirection().multiply(1.5).setY(3));
 			}
 		}
 	}

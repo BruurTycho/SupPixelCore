@@ -38,8 +38,8 @@ public class EnderPearlRider implements Listener {
 		if (event.getEntity() instanceof EnderPearl) {
 			final ProjectileSource shooter = event.getEntity().getShooter();
 			event.getEntity().setPassenger((Entity) shooter);
-			event.getEntity().setGravity(false);
-			event.getEntity().setVelocity(new Vector(3, 1, 0));
+			plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() { public void run() { plugin.getServer().broadcastMessage("bericht 1"); } }, 20 * 5);
+			plugin.getServer().broadcastMessage("bericht 2");
 		}
 	}
 }
