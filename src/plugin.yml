@@ -21,3 +21,5 @@ commands:
         description: rick is een pik
     online:
         description: online gekkies
+    skin:
+        description: kies je skin

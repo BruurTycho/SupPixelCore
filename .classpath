@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="C:/Users/BruurTycho/Dropbox/_Testing/Lib/GlowAPI_v1.4.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/BruurTycho/Dropbox/_Testing/Lib/TitleAPI_v2.1.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/BruurTycho/Dropbox/_Testing/Lib/PowerfulPermsAPI-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/BruurTycho/Dropbox/_Testing/Lib/SkinsRestorer-v12.5.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
