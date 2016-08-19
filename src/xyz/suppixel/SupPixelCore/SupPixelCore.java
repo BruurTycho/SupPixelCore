@@ -16,12 +16,15 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 	
 	@Override
 	public void onEnable() {
+		PowerfulPermsPlugin plugin = (PowerfulPermsPlugin) Bukkit.getPluginManager().getPlugin("PowerfulPerms");
+		PermissionManager permissionManager = plugin.getPermissionManager();
+		// events \/
 		getServer().getPluginManager().registerEvents(this, this);
 		getServer().getPluginManager().registerEvents(new EnderPearlRider(this), this);
 		getServer().getPluginManager().registerEvents(new SkyblockFly(this), this);
 		getServer().getPluginManager().registerEvents(new DoubleJump(this), this);
 		getServer().getPluginManager().registerEvents(new PressurePlateLaunch(this), this);
-		getLogger().info("onEnabled, done.");
+		// command \/
 		getCommand("spawn").setExecutor(new CommandSpawn(this)); // this = SupPixelCore --- CommandSpawn = CommandSpawn Class
 		getCommand("mem").setExecutor(new CommandMem(this));
 		getCommand("getprefix").setExecutor(new CommandGetPrefix(this));
@@ -29,6 +32,8 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getCommand("day").setExecutor(new CommandDay(this));
 		getCommand("glowrainbow").setExecutor(new CommandGlowRainbow(this));
 		getCommand("glowrainbowadmin").setExecutor(new CommandGlowRainbowAdmin(this));
+		// permission listeners \/
+		permissionManager.getEventHandler().registerListener(new PermissionExpire(this));
 	}
 	
 	@Override
@@ -46,6 +51,5 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		event.setQuitMessage(null);
 	}
 	
-	PowerfulPermsPlugin plugin = (PowerfulPermsPlugin) Bukkit.getPluginManager().getPlugin("PowerfulPerms");
-	PermissionManager permissionManager = plugin.getPermissionManager();
+
 }

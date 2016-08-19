@@ -15,6 +15,8 @@ import com.github.cheesesoftware.PowerfulPermsAPI.PermissionPlayer;
 import com.github.cheesesoftware.PowerfulPermsAPI.PowerfulPermsPlugin;
 import com.github.cheesesoftware.PowerfulPermsAPI.ResultRunnable;
 
+
+
 public class CommandGetPrefix implements CommandExecutor {
 	SupPixelCore plugin; // make a variable that is actually just the plugin
 							// (main class) (y)
