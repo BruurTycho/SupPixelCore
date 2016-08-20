@@ -1,5 +1,7 @@
 package xyz.suppixel.SupPixelCore;
 
+import java.util.Random;
+
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
@@ -24,7 +26,7 @@ public class CommandCircle implements CommandExecutor {
 		} if (sender instanceof Player) {
 			Player player = ((Player) sender).getPlayer();
 			
-			for (int i = 0; i < 100; i += 4) {
+			for (int i = 0; i < 16; i += new Random().nextInt(4)) {
 				Block block = player.getLocation().subtract(0, 1, i).getBlock();	
 				block.setType(Material.TNT);
 				Block block1 = player.getLocation().subtract(0, -1, i).getBlock();	
