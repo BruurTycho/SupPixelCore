@@ -31,6 +31,7 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getCommand("glowrainbow").setExecutor(new CommandGlowRainbow(this));
 		getCommand("glowrainbowadmin").setExecutor(new CommandGlowRainbowAdmin(this));
 		getCommand("skin").setExecutor(new CommandSkin(this));
+		getCommand("circle").setExecutor(new CommandCircle(this));
 		// permission listeners \/
 		permissionManager.getEventHandler().registerListener(new PermissionExpire(this));
 	}

@@ -23,3 +23,5 @@ commands:
         description: online gekkies
     skin:
         description: kies je skin
+    circle:
+        description: kies je skin
