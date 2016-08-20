@@ -27,6 +27,8 @@ public class CommandCircle implements CommandExecutor {
 			for (int i = 0; i < 100; i += 4) {
 				Block block = player.getLocation().subtract(0, 1, i).getBlock();	
 				block.setType(Material.TNT);
+				Block block1 = player.getLocation().subtract(0, -1, i).getBlock();	
+				block1.setType(Material.TNT);
 			}
 			
 			
