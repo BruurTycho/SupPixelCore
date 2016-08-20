@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import net.md_5.bungee.api.ChatColor;
+import skinsrestorer.shared.api.SkinsRestorerAPI;
 
 public class CommandSkin implements CommandExecutor {
 	SupPixelCore plugin; // make a variable that is actually just the plugin
@@ -28,7 +29,7 @@ public class CommandSkin implements CommandExecutor {
 			return true;
 		} if (sender instanceof Player) {
 			System.out.println("okay, doing skin shit");
-			Inventory inv = Bukkit.createInventory(null, 9, ChatColor.DARK_GREEN + "Skin Selector");
+			Inventory inv = Bukkit.createInventory(null, 27, ChatColor.DARK_GREEN + "Skin Selector");
 			
 			ItemStack skin1 = new ItemStack (Material.DIAMOND_CHESTPLATE);
 			ItemMeta skin1Meta = skin1.getItemMeta();
@@ -39,6 +40,8 @@ public class CommandSkin implements CommandExecutor {
 			inv.setItem(3, skin1);
 			
 			((Player) sender).openInventory(inv);
+			SkinsRestorerAPI.setSkin("FinnT730", "notch");
+			
 		return true;
 	}
 		return false;
