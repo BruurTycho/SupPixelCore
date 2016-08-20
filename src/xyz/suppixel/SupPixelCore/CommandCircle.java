@@ -24,33 +24,10 @@ public class CommandCircle implements CommandExecutor {
 		} if (sender instanceof Player) {
 			Player player = ((Player) sender).getPlayer();
 			
-			Block block0 = player.getLocation().subtract(0, 1, 0).getBlock();
-			block0.setType(Material.TNT); // under
-			
-			Block block1 = player.getLocation().subtract(0, 1, 1).getBlock();
-			block1.setType(Material.TNT); // under +1 z
-			
-			Block block2 = player.getLocation().subtract(0, 1, -1).getBlock();
-			block2.setType(Material.TNT); // under -1 z
-			
-			Block block3 = player.getLocation().subtract(1, 1, 0).getBlock();
-			block3.setType(Material.TNT); // under +1 x
-			
-			Block block4 = player.getLocation().subtract(-1, 1, 0).getBlock();
-			block4.setType(Material.TNT); // under -1 x
-			
-			Block block5 = player.getLocation().subtract(1, 1, -1).getBlock();
-			block5.setType(Material.TNT); // under +1 x & -1 z
-			
-			Block block6 = player.getLocation().subtract(1, 1, 1).getBlock();
-			block6.setType(Material.TNT); // under +1 x & + 1 z
-			
-			Block block7 = player.getLocation().subtract(-1, 1, -1).getBlock();
-			block7.setType(Material.TNT); // under -1 x & -1 z
-			
-			Block block8 = player.getLocation().subtract(-1, 1, 1).getBlock();
-			block8.setType(Material.TNT); // under -1 x & + 1 z
-			
+			for (int i = 0; i < 100; i += 4) {
+				Block block = player.getLocation().subtract(0, 1, i).getBlock();	
+				block.setType(Material.TNT);
+			}
 			
 			
 
