@@ -1,7 +1,7 @@
 name: SupPixelCore
 main: xyz.suppixel.SupPixelCore.SupPixelCore
 version: 1.0
-depend: [PowerfulPerms]
+softdepend: [PowerfulPerms]
 commands:
     spawn:
         description: text

@@ -10,10 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.github.cheesesoftware.PowerfulPermsAPI.PermissionManager;
 import com.github.cheesesoftware.PowerfulPermsAPI.PowerfulPermsPlugin;
 
-public class SupPixelCore extends JavaPlugin implements Listener {
-	
-	
-	
+public class SupPixelCore extends JavaPlugin implements Listener {	
 	@Override
 	public void onEnable() {
 		PowerfulPermsPlugin plugin = (PowerfulPermsPlugin) Bukkit.getPluginManager().getPlugin("PowerfulPerms");
