@@ -31,6 +31,8 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getCommand("skin").setExecutor(new CommandSkin(this));
 		// permission listeners \/
 		permissionManager.getEventHandler().registerListener(new PermissionExpire(this));
+		
+		ActionBeaconSpawn();
 	}
 
 	@Override
