@@ -22,6 +22,9 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getServer().getPluginManager().registerEvents(new DoubleJump(this), this);
 		getServer().getPluginManager().registerEvents(new PressurePlateLaunch(this), this);
 		getServer().getPluginManager().registerEvents(new SomeSign(this), this);
+		
+		getServer().getPluginManager().registerEvents(new ChangeBeaconColor(this), this);
+		
 		// command \/
 		getCommand("spawn").setExecutor(new CommandSpawn(this));
 		getCommand("mem").setExecutor(new CommandMem(this));
