@@ -19,24 +19,36 @@ public class CommandCircle implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if (!sender.hasPermission("suppixel.circle")) { // if the sender DOESNT
-														// have permissions
-			sender.sendMessage("u haz no permz");
-			return true;
-		} if (sender instanceof Player) {
+//		if (!sender.hasPermission("suppixel.circle")) { // if the sender DOESNT
+//														// have permissions
+//			sender.sendMessage("u haz no permz");
+//			return true;
+//		}
+		
+		if (sender instanceof Player) {
 			Player player = ((Player) sender).getPlayer();
 			
-			for (int i = 0; i < 16; i += new Random().nextInt(4)) {
-				Block block = player.getLocation().subtract(0, 1, i).getBlock();	
-				block.setType(Material.TNT);
-				Block block1 = player.getLocation().subtract(0, -1, i).getBlock();	
-				block1.setType(Material.TNT);
+			Random r = new Random();
+			for (int i = 0; i < 16; i += r.nextInt(5)) {
+				for (int y = 0; y != 1; y++) {
+					for (int z = 0; z != 16; z++) {
+						Block block = player.getLocation().subtract(i, y + 2, z + i).getBlock();
+						block.setType(Material.IRON_BLOCK);
+						
+						Block b2 = player.getLocation().subtract(-i, y + 2, z - i).getBlock();
+						b2.setType(Material.STONE);
+						
+						Block b3 = player.getLocation().subtract(i, y + 2, z * i / 16).getBlock();
+						b3.setType(Material.REDSTONE_BLOCK);
+						
+						Block b4 = player.getLocation().subtract(-i, y + 2, z * i / 16).getBlock();
+						b4.setType(Material.GLOWSTONE);
+					}
+				}
 			}
-			
-			
 
-		return true;
-	}
+			return true;
+		}
 		return false;
-}
+	}
 }
