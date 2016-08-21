@@ -22,9 +22,6 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getServer().getPluginManager().registerEvents(new DoubleJump(this), this);
 		getServer().getPluginManager().registerEvents(new PressurePlateLaunch(this), this);
 		getServer().getPluginManager().registerEvents(new SomeSign(this), this);
-		
-		getServer().getPluginManager().registerEvents(new ChangeBeaconColor(this), this);
-		
 		// command \/
 		getCommand("spawn").setExecutor(new CommandSpawn(this));
 		getCommand("mem").setExecutor(new CommandMem(this));
@@ -34,6 +31,13 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getCommand("skin").setExecutor(new CommandSkin(this));
 		// permission listeners \/
 		permissionManager.getEventHandler().registerListener(new PermissionExpire(this));
+
+		
+		
+		ActionBeaconSpawn b = new ActionBeaconSpawn(this);
+		b.plugin.equals(getClass());
+		
+		
 	}
 
 	@Override
@@ -43,7 +47,7 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 	}
 
 	@EventHandler
-	public void onPlayerJoin(PlayerJoinEvent event) {
+	public void onPlayerJoin(PlayerJoinEvent event) {		
 		if (!event.getPlayer().getPlayer().hasPermission("suppixel.cooljoinmessage")) {
 			event.setJoinMessage(null);
 		}
