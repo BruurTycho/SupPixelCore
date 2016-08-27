@@ -35,7 +35,7 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 
 	@Override
 	public void onDisable() {
-		// nuthing
+		// nuthing wow
 
 	}
 
