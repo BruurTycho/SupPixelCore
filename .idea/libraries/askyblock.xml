@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="askyblock">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/askyblock.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/BungeeCord.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/GlowAPI_v1.4.4.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/PowerfulPermsAPI-1.0.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/SkinsRestorer-v12.5.8.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/spigot-1.10.2.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/TitleAPI_v2.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/SkinsRestorer-v12.5.8.jar!/" />
+      <root url="jar://$USER_HOME$/Dropbox/_Testing/Lib/spigot-1.10.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>
