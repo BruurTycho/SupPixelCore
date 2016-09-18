@@ -18,8 +18,8 @@ public class SomeSign implements Listener {
 	@EventHandler
 	public void onSignChange(SignChangeEvent event) {
 		if (event.getLine(0).equalsIgnoreCase("[Damn]")) {
-			event.setLine(0, "§6[Damn]");
-			event.setLine(1, "§6[Daniel]");
+			event.setLine(0, "ï¿½6[Damn]");
+			event.setLine(1, "ï¿½6[Daniel]");
 		}
 	}
 	@EventHandler
@@ -27,9 +27,9 @@ public class SomeSign implements Listener {
 		if (!(event.getAction() == Action.RIGHT_CLICK_BLOCK)) return;
 		if (event.getClickedBlock().getState() instanceof Sign) {
 			Sign s = (Sign) event.getClickedBlock().getState();
-			if (s.getLine(0).equalsIgnoreCase("§6[Damn]")) {
+			if (s.getLine(0).equalsIgnoreCase("ï¿½6[Damn]")) {
 				event.getPlayer().setVelocity(new Vector(0, 20, 0));
-				event.getPlayer().sendMessage("§6Damn Daniel!");
+				event.getPlayer().sendMessage("ï¿½6Damn Daniel!");
 			}
 		}
 	}

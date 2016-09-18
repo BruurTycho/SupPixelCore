@@ -28,7 +28,6 @@ public class SupPixelCore extends JavaPlugin implements Listener {
 		getCommand("getprefix").setExecutor(new CommandGetPrefix(this));
 		getCommand("sun").setExecutor(new CommandSun(this));
 		getCommand("day").setExecutor(new CommandDay(this));
-		getCommand("skin").setExecutor(new CommandSkin(this));
 		// permission listeners \/
 		permissionManager.getEventHandler().registerListener(new PermissionExpire(this));
 	}

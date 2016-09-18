@@ -3,11 +3,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_101"/>
 	<classpathentry kind="lib" path="C:/Program Files/Java/jre1.8.0_101/lib/jfr.jar"/>
-	<classpathentry kind="lib" path="D:/Dropbox/Dropbox/Lib/askyblock.jar"/>
-	<classpathentry kind="lib" path="D:/Dropbox/Dropbox/Lib/GlowAPI_v1.4.4.jar"/>
-	<classpathentry kind="lib" path="D:/Dropbox/Dropbox/Lib/PowerfulPermsAPI-1.0.jar"/>
-	<classpathentry kind="lib" path="D:/Dropbox/Dropbox/Lib/SkinsRestorer-v12.5.8.jar"/>
-	<classpathentry kind="lib" path="D:/Dropbox/Dropbox/Lib/spigot-1.10.2.jar"/>
-	<classpathentry kind="lib" path="D:/Dropbox/Dropbox/Lib/TitleAPI_v2.1.4.jar"/>
+	<classpathentry kind="lib" path="E:/Dropbox/Dropbox/Lib/askyblock.jar"/>
+	<classpathentry kind="lib" path="E:/Dropbox/Dropbox/Lib/GlowAPI_v1.4.4.jar"/>
+	<classpathentry kind="lib" path="E:/Dropbox/Dropbox/Lib/PowerfulPermsAPI-1.0.jar"/>
+	<classpathentry kind="lib" path="E:/Dropbox/Dropbox/Lib/spigot-1.10.2.jar" sourcepath="E:/Dropbox/Dropbox/Lib/spigot-1.10.2.jar"/>
+	<classpathentry kind="lib" path="E:/Dropbox/Dropbox/Lib/TitleAPI_v2.1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
